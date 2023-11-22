@@ -2,15 +2,9 @@
 
 
 function adultFilter(persons) {
-    
-  const adults =[];
 
-    for(const person of persons) {
-      if(person.age >= 18) {
-        adults.push(person);
-      }
-    }
-    return adults
+  return persons.age >= 18
+
   }
   
   const persons = [
@@ -27,6 +21,6 @@ function adultFilter(persons) {
   ];
   
 
-  const adults = adultFilter(persons);
+  const adults = persons.filter(adultFilter);
   console.log(persons);
   console.log(adults);
